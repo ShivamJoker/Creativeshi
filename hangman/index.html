@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Hangman Game - By Shivam</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="style4.css">
+    <script src="sound.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="help">
+            <span>?</span>
+            <span>x</span>
+            <span>
+                In this Game
+                <br> You have to fill
+                <br> all the blanks by guessing the letters
+                <br>of the word. You can use your Keybaord or Game Keyboard
+            </span>
+        </div>
+        <div id="game-intro">
+            <h1>The Hangman 🕴 Game</h1>
+            <img src="hangman.svg" alt="Hangman">
+            <div id="play">PLAY</div>
+        </div>
+        <div id="game-start">
+            <div id="words">
+            </div>
+            <div id="score">Score :
+                <span></span>
+            </div>
+            <div id="input-kbd">
+                <div id="keys">
+                    <div class="row">
+                        <span class="column">A</span>
+                        <span class="column">B</span>
+                        <span class="column">C</span>
+                        <span class="column">D</span>
+                        <span class="column">E</span>
+                    </div>
+                    <div class="row">
+                        <span class="column">F</span>
+                        <span class="column">G</span>
+                        <span class="column">H</span>
+                        <span class="column">I</span>
+                        <span class="column">J</span>
+                    </div>
+                    <div class="row">
+                        <span class="column">K</span>
+                        <span class="column">L</span>
+                        <span class="column">M</span>
+                        <span class="column">N</span>
+                        <span class="column">O</span>
+                    </div>
+                    <div class="row">
+                        <span class="column">P</span>
+                        <span class="column">Q</span>
+                        <span class="column">R</span>
+                        <span class="column">S</span>
+                        <span class="column">T</span>
+                    </div>
+                    <div class="row">
+                        <span class="column">U</span>
+                        <span class="column">V</span>
+                        <span class="column">W</span>
+                        <span class="column">X</span>
+                        <span class="column">Y</span>
+                    </div>
+                    <div class="row">
+                        <span class="column">Z</span>
+                    </div>
+                </div>
+            </div>
+            <div id="hangman-life">
+                <svg id="svg-hangman" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                    y="0px" viewBox="0 0 400 500" enable-background="new 0 0 400 500" xml:space="preserve">
+                    <g id="base">
+                        <rect x="131" y="15" width="10" height="49" />
+                        <rect x="381" y="14" width="13" height="421" />
+                        <rect x="131" y="4" width="263" height="11" />
+                        <rect x="346.296" y="-6.493" transform="matrix(0.7007 -0.7134 0.7134 0.7007 74.6695 264.4605)" width="12.494" height="99.45"
+                        />
+                    </g>
+                    <g id="hands">
+
+                        <rect x="193.339" y="140.066" transform="matrix(-0.5915 -0.8063 0.8063 -0.5915 176.2806 452.67)" width="18.951" height="83.225"
+                        />
+
+                        <rect x="53.123" y="140.066" transform="matrix(0.5737 -0.8191 0.8191 0.5737 -122.1196 128.7184)" width="18.951" height="83.224"
+                        />
+                    </g>
+                    <g id="legs">
+                        <rect x="103" y="273" width="17" height="73" />
+                        <rect x="150" y="273" width="17" height="73" />
+                    </g>
+                    <g id="tummy">
+                        <path d="M181,261.24c0,8.151-6.608,14.76-14.759,14.76h-59.481C98.608,276,92,269.392,92,261.24v-84.48
+                       c0-8.151,6.608-14.76,14.759-14.76h59.481c8.151,0,14.759,6.608,14.759,14.76V261.24z" />
+                        <g id="Layer_3">
+                            <rect x="128" y="137" width="16" height="25" />
+                        </g>
+                    </g>
+
+                    <g id="head">
+                        <circle cx="136.23" cy="104.251" r="41.04" />
+                    </g>
+                    <g id="eyes">
+                        <ellipse fill="#FFFFFF" cx="119.728" cy="96.82" rx="7.995" ry="7.431" />
+                        <ellipse fill="#FFFFFF" cx="152.937" cy="96.82" rx="7.995" ry="7.431" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div id="pa-container">
+            <div id="play-again">
+                <div id="loose">
+                    <h1>You Lose 👎 The Game</h1>
+                </div>
+                <div id="won">
+                    <h1>You Won 👍 The Game</h1>
+                </div>
+                <div id="title">Play Again</div>
+            </div>
+        </div>
+
+    </div>
+    <script src="main3.js"></script>
+</body>
+
+</html>

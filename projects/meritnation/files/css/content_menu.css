@@ -1,0 +1,67 @@
+.s_letter{
+	font-size: 12px;
+}
+#content_menu {
+    width:100%;
+    display:block;
+    background-color:#64abfb;
+    border-bottom:5px solid #2980b9;
+    }
+#content_menu ul {
+    padding:0;
+    margin:0;
+    list-style: none;
+    position: relative;
+    }
+#content_menu ul:After {
+    content: "";
+    display:block;
+    clear:both;
+    }     
+#content_menu ul li {
+    display:list-item;
+    list-style: none;
+    float:left;
+    background-color:#64abfb;
+    }
+ #content_menu ul li i {
+     font-size:25px;
+     width:30px;
+     } 
+#content_menu ul li a {
+    display:block;
+    padding:15px 30px;  
+    color:#FFF;
+    font-size:20px;
+    text-decoration:none;
+    font-family: 'Bree Serif', 'serif';
+    text-align:center;
+}
+#content_menu ul ul {
+    display: none;
+    position: absolute; top: 79px;
+}
+/* Display Dropdowns on Hover */
+#content_menu ul li:hover > ul {
+    display:list-item;
+}
+/* Fisrt Tier Dropdown */
+#content_menu ul ul li {
+    width:200px;
+    float:none;
+    position: relative;
+    border-bottom:none;
+}
+#content_menu ul ul li i {
+    margin-right:10px;
+    }
+#content_menu ul ul li a {
+    padding:15px 20px;
+    text-align:left;
+    }
+/* Second, Third and more Tiers */
+#content_menu ul ul ul li {
+    position: absolute relative;
+    top:-79px;
+    left:200px;
+}

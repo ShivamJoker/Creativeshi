@@ -1,0 +1,52 @@
+@font-face {
+    font-family: Pacifico;
+    src:url('../../files/fonts/Pacifico.ttf') ;
+}
+@font-face {
+    font-family: lato-regular;
+    src:url('../../files/fonts/lato-regular.ttf') ;
+}
+body, html{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #E6E6E6; 
+}
+#header{
+	background-color: #00cc99;
+	position: relative;
+}
+#moff{
+	text-align:center;
+	font-family:pacifico;
+	font-size: 32px;
+	color: white; 
+	text-shadow: 1px 1px black;	
+}
+#login{
+	text-align:center;
+	position: absolute;
+	top: 15px;
+	right: 16px;
+	font-size: 18px;
+	font-family: lato-regular;
+	background-color: #d9d9d9;
+	width: 60px;
+	height: 25px;
+	border-radius: 10px;
+}
+#login a{
+	text-decoration: none;
+	color: black;
+}
+#login a:hover{
+	background-color: #f2f2f2;
+	border-radius: 10px;
+	width: 60px;
+}
+#login:hover{
+	background-color: #f2f2f2;
+	border-radius: 10px;
+	width: 60px;
+}

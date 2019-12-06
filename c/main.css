@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css?family=Boogaloo|Love+Ya+Like+A+Sister');
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    position: fixed;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+
+
+#content {
+    background: linear-gradient(to bottom, #74ebd5, #acb6e5) no-repeat;
+    background: -moz-linear-gradient(bottom, #74ebd5, #acb6e5);
+    width: 100%;
+    height: 100%;
+}
+
+#touchSanta{
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    background:rgba(222, 222, 222, 0.67);
+
+}
+#touchSanta > p{
+    position: absolute;
+    padding: 10px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.849);
+    color: #ff525dab;
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* circle overlay */
+
+#circle {
+    width: 2px;
+    height: 2px;
+    background: #ecf0f1;
+    border-radius: 50%;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    z-index: 500;
+    border: 2px solid #3498db;
+}
+
+@keyframes bcircle {
+    100% {
+        width: 5000px;
+        height: 5000px;
+        top: -2500px;
+        left: -2500px;
+    }
+}
+
+@keyframes scircle {
+    100% {
+        width: 2000px;
+        height: 2000px;
+        top: -1000px;
+        left: -1000px;
+    }
+}
+
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: block;
+}
+
+@media only screen and (max-width: 550px) {
+    #create {
+        width: 45%;
+        height: auto;
+        transform: scale(1.3);
+        right: 0;
+        padding-right: 5%;
+    }
+    #circle {
+        animation: scircle 1s forwards paused ease-in-out;
+    }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 650px) {
+    #santa-div {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 550px) {
+    #santa-div {
+        width: 50%;
+        float: right;
+    }
+    #msg h2 {
+        font-size: 4vw;
+    }
+    #msg h1 {
+        font-size: 8vw;
+    }
+    #create {
+        left: 30%;
+        top: -5px;
+        transform: scale(2);
+        padding-top: 10px;
+        height: 50px;
+    }
+    #circle {
+        animation: bcircle 1.5s paused forwards ease-in-out;
+
+    }
+    #sharing{
+        width: 450px;
+    }
+}
+
+    #circle:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border-right: 40px solid #3498db;
+        border-left: 40px solid #e74c3c;
+        border-top: 40px solid #e67e22;
+        border-bottom: 40px solid #1abc9c;
+        display: block;
+        position: absolute;
+        top: -40px;
+        left: -40px;
+        animation: rborder .7s infinite linear;
+    }
+
+    @keyframes rborder{
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+
+#create {
+    position: absolute;
+    font-weight: bold;
+    z-index: 50;
+    bottom: 10%;
+    background: #ff525d;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
+}
+
+#snowman {
+    z-index: 10;
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom center;
+    animation: swing 1.5s infinite alternate;
+}
+
+div {
+    display: block;
+}
+
+button {
+    font-size: 2em;
+    border: none;
+    background: rgb(48, 48, 48);
+    color: white;
+    cursor: pointer;
+    display: inline;
+    border-radius: 10px;
+    margin: 1%;
+}
+
+.whatsapp {
+    background: #64D448;
+    border-radius: 10px;
+    display: inline-block
+}
+
+#generate {
+    width: 200px;
+    height: 30px;
+    font-size: 1.5em;
+    border: 2px solid #7684fd;
+    padding: 1px;
+    padding: 2px;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(-15deg);
+    }
+}
+
+#santa-div {
+    transform-origin: top center;
+    position: relative;
+    min-width: 356px;
+    display: block;
+    top: 0px;
+    z-index: 5;
+}
+
+@keyframes woosh {
+    0% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
+#santa {
+    width: 100%;
+    height: 100%;
+}
+
+#name h1 {
+    color: #e74c3c;
+    font-family: 'Boogaloo', cursive;
+    text-transform: uppercase;
+    text-shadow: None;
+    font-weight: 600;
+}
+
+h1 span {
+    display: inline-block;
+    position: relative;
+    transform: rotate(540deg);
+}
+
+h1 span:nth-child(odd) {
+    animation: rotate 1s forwards alternate cubic-bezier(0.91, -0.03, 0.58, 1);
+    top: -70vh;
+}
+
+h1 span:nth-child(even) {
+    animation: rotate 1s forwards alternate cubic-bezier(0.91, -0.03, 0.58, 1);
+    top: 70vh;
+}
+
+@keyframes rotate {
+    100% {
+        top: 0vh;
+        transform: rotate(0deg);
+    }
+}
+
+#msg {
+    color: #fff;
+    text-shadow: 0px 0px 2px #36e736, 0px 0px 4px #19da19, 0px 0px 6px #19da19, 0px 0px 8px #19da19, 0px 0px 10px #19da19, 0px 0px 12px #141414;
+    position: absolute;
+    text-align: center;
+    bottom: 14%;
+    font-size: 6vw;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Love Ya Like A Sister', cursive;
+    text-shadow: 0px 0px 2px #36e736, 0px 0px 4px #19da19, 0px 0px 6px #19da19, 0px 0px 8px #19da19, 0px 0px 10px #19da19, 0px 0px 12px #19da19, 0px 0px 16px #141414;
+}
+
+#msg h1,
+h2 {
+    margin: 0;
+}
+
+#sharing {
+    z-index: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+#url {
+    position: absolute;
+    top: -100px;
+    left: -1000px;
+}

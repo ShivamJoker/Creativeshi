@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SSH Connect</title>
+</head>
+<style>
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    ::-webkit-input-placeholder {
+        text-align: center;
+    }
+
+    input {
+        margin: 0 10px;
+        font-size: 1.3em;
+    }
+
+    button {
+        background-color: #555555;
+        cursor: pointer;
+        border: none;
+        color: white;
+        padding: 8px 32px;
+        margin: 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.4em;
+        border-radius: 25px;
+        min-height: 40px;
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        font-family: 'Open Sans', sans-serif;
+
+    }
+
+    p {
+        text-align: center;
+        font-size: 2em;
+    }
+    #command{
+        margin-bottom: 80px;
+    }
+</style>
+
+<body>
+    <p>Connect Your Device through SSH</p>
+
+    <span>
+        <input type="text" id="myip" placeholder="Paste your device IP">
+    </span>
+    <br>
+    <span>
+        <input type="text" id="name" autocapitalize="none" placeholder="Type a unique name">
+    </span>
+    <button>Copy Command</button>
+    <span>
+        <input type="text" placeholder="Command Output" id="command">
+    </span>
+    <script>
+        const btn = document.querySelector("button"),
+            myip = document.querySelector("#myip"),
+            name = document.querySelector("#name"),
+            command = document.querySelector("#command");
+
+        btn.addEventListener("click", () => {
+            let cmd = `ssh -o TCPKeepAlive=yes -R 80:${myip.value}:80 ${name.value.toLowerCase()}@ssh.localhost.run`
+            command.value = cmd
+            command.select();
+            document.execCommand('copy');
+        })
+    </script>
+</body>
+
+</html>
